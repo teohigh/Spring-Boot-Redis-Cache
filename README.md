@@ -92,7 +92,7 @@ spring.cache.type=redis
 
 ### 4. Kích hoạt caching trong Spring Boot
 
-```
+```java
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Configuration;
 
@@ -104,7 +104,7 @@ public class AppConfig {
 
 ### 5. Sử dụng Redis Cache trong mã nguồn
 
-```xml
+```java
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
@@ -131,7 +131,7 @@ public class UserService {
 
 Dưới đây là ví dụ minh họa:
 
-```
+```java
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.CacheEvict;
