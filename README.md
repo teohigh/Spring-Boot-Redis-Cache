@@ -81,7 +81,7 @@
 
 ### 3. Cấu hình Redis trong `application.properties`
 
-```xml
+```properties
 # Redis configuration
 spring.data.redis.host=localhost
 spring.data.redis.port=6379
