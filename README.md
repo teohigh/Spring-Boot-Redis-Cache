@@ -80,7 +80,7 @@ docker exec -it my-redis redis-cli
 docker stop my-redis
 
 // Chạy container Docker
-docker run --name my-redis -d redis
+docker start my-redis
 ```
 
 ### 2. Thêm dependency vào `pom.xml`
