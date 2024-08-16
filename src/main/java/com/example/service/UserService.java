@@ -18,6 +18,8 @@ import java.util.List;
 public class UserService {
     UserRepository userRepository;
 
+    @Cacheable(value = "users") // Lưu kết quả trả về vào cache với key mặc định
+    //  Nếu có request khác truy cập vào cùng một key thì sẽ lấy kết quả từ cache
     public List<User> getUsers() {
         return userRepository.findAll();
     }
