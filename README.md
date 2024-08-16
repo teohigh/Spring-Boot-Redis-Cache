@@ -61,10 +61,27 @@
 
 ## Cài đặt
 
-### 1. Cài đặt Redis
+### 1. Cài đặt Redis (bằng Docker)
 
-- Tải và cài đặt Redis từ [redis.io](https://redis.io/download).
-- Khởi động Redis server.
+```docker
+// Kéo image Redis từ Docker Hub
+docker pull redis
+
+// Chạy container Redis
+docker run -p 6379:6379 --name my-redis -d redis
+
+// Xem tất cả các container, bao gồm cả những container đã dừng
+docker ps -a
+
+// Kết nối tới Redis
+docker exec -it my-redis redis-cli
+
+// Dừng container Redis
+docker stop my-redis
+
+// Chạy container Docker
+docker run --name my-redis -d redis
+```
 
 ### 2. Thêm dependency vào `pom.xml`
 
