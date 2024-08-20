@@ -15,7 +15,7 @@ import java.time.Instant;
 @Component
 public class LoggerAspect {
 
-    @Around("execution(* com.example.service.*.*(..))")
+    @Around("execution(* com.example.controller.*.*(..))")
     public Object logAroundServiceLayerMethods(ProceedingJoinPoint joinPoint) throws Throwable {
         String className = joinPoint.getTarget().getClass().getSimpleName();
         String methodName = joinPoint.getSignature().getName();
